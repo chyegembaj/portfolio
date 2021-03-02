@@ -1,6 +1,7 @@
 import React from "react";
 import Typed from "react-typed";
 import Particles from "react-particles-js";
+import { SocialMediaIconsReact } from "social-media-icons-react";
 
 const Home = () => {
   return (
