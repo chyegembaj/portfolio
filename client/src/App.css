@@ -7,6 +7,9 @@
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
 }
+html {
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto condesed" sans-serif;
 }
@@ -124,17 +127,14 @@ padding: 0 !important;
   text-align: center;
   font-family: "Roboto condesed" sans-serif;
 }
-.about {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.about {
+  height: 90vh;
   text-align: center;
-  font-family: "Roboto condesed" sans-serif;
+  justify-content: center;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
 }

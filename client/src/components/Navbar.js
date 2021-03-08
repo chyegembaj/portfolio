@@ -10,7 +10,9 @@ const Navbar = () => {
       <div className="container">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            <img className="logo" src={logo} alt="myLogo" />
+            <span className="fullname" style={{ color: "white" }}>
+              Chidimma Egemba
+            </span>
           </a>
           <button
             className="navbar-toggler"
@@ -25,11 +27,6 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
               <li className="nav-item">
                 <a className="nav-link" href="/about">
                   about
