@@ -15,7 +15,6 @@ let transport = {
   service: "Gmail",
   secure: false,
   auth: {
-    type: "OAuth2",
     user: process.env.username,
     pass: process.env.password,
   },
