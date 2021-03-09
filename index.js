@@ -33,7 +33,8 @@ app.get("*", (req, res) => {
 });
 
 let transport = {
-  //host: "smtp.mail.yahoo.com",
+  host: "smtp.gmail.com",
+  name: "www.gmail.com",
   //port: 465,
   service: "Gmail",
   secure: false,
