@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -10,23 +10,23 @@ import Project from "./components/Project";
 
 function App() {
   return (
-    <Router>
+    <div>
       <Navbar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/" component={Home}>
           <Home />
         </Route>
-        <Route path="/contact">
+        <Route path="/contact" component={Contact}>
           <Contact />
         </Route>
-        <Route path="/about">
+        <Route path="/about" component={About}>
           <About />
         </Route>
         <Route path="/project">
           <Project />
         </Route>
       </Switch>
-    </Router>
+    </div>
   );
 }
 
