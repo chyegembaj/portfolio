@@ -4,27 +4,33 @@ import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 dotenv.config();
+import { fileURLToPath } from "url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-if (process.env.NODE_ENV === "production") {
-  // Exprees will serve up production assets
-  app.use("/", express.static(path.join(__dirname, "/client/build")));
-  app.use(express.static("client/build"));
+app.use("/", express.static(path.join(__dirname, "/client/build")));
+// if (process.env.NODE_ENV === "production") {
+//   // Exprees will serve up production assets
+//   app.use("/", express.static(path.join(__dirname, "/client/build")));
+//   app.use(express.static("client/build"));
 
-  // Express serve up index.html file if it doesn't recognize route
+//   // Express serve up index.html file if it doesn't recognize route
 
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  // });
+//   // app.get("*", (req, res) => {
+//   //   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+//   // });
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/client/build/index.html"));
-  });
-}
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "/client/build/index.html"));
+//   });
+// }
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+});
 
 let transport = {
   //host: "smtp.mail.yahoo.com",
