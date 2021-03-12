@@ -62,6 +62,12 @@ const Navbar = () => {
                 style={{ height: 35, width: 35 }}
                 className="mr-2"
               />
+              <SocialIcon
+                url="https://www.facebook.com/chidimma.egemba"
+                target="_blank"
+                style={{ height: 35, width: 35 }}
+                className="mr-2"
+              />
             </div>
           </div>
         </div>
