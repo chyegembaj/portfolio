@@ -43,6 +43,11 @@ const Navbar = () => {
                   contact
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/experience">
+                  experience
+                </a>
+              </li>
             </ul>
             <div className="social-media">
               <SocialIcon
